@@ -1,0 +1,26 @@
+{
+  "name": "firebase-react-chat-demo",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "3",
+    "firebase": "^4.1.2",
+    "react": "^15.5.4",
+    "react-bootstrap": "^0.31.0",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "^0.0.2",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "build-css": "NODE_PATH=./src node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "NODE_PATH=./src yarn run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "NODE_PATH=./src react-scripts start",
+    "start": "NODE_PATH=./src npm-run-all -p watch-css start-js",
+    "build": "NODE_PATH=./src yarn run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

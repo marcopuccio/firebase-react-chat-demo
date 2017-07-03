@@ -1,0 +1,17 @@
+$message-bg: rgba(#b9b9b9, .15);
+
+.Message {
+  background-color: $message-bg;
+  margin-bottom: 7px;
+  padding: 3px 0;
+  border-radius: 5px;
+}
+
+.Message-user {
+  text-align: right;
+  font-style: italic;
+}
+
+.Message-messageText {
+  font-weight: bold;
+}

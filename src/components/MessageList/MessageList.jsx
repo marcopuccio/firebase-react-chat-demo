@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Grid } from 'react-bootstrap';
 
 import { Message } from 'components/Message';
 import firebase from 'shared/firebase';
@@ -23,11 +24,13 @@ export default class MessageList extends Component {
   render() {
     const messages = Object.entries(this.state.messages);
     return (
-      <main>
-        {messages.map(message => {
-          return <Message key={message[0]} message={message[1]} />
-        })}
-      </main>
+      <Grid>
+        <main className="MessageList">
+          {messages.map(message => {
+            return <Message key={message[0]} message={message[1]} />
+          })}
+        </main>
+      </Grid>
     );
   }
 }

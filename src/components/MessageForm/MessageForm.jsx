@@ -4,7 +4,6 @@ import {
   Col, 
   ControlLabel, 
   FormControl, 
-  FormGroup, 
   Row
 } from 'react-bootstrap';
 

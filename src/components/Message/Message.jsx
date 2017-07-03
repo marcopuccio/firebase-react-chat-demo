@@ -5,12 +5,12 @@ import './Message.css';
 
 export default function Message(props) {
   return (
-    <Row>
+    <Row className="Message">
       <Col xs={12} sm={2}>
-        <p>{props.message.user}</p>
+        <p className="Message-user">{props.message.user}</p>
       </Col>
       <Col xs={12} sm={10}>
-        <p>{props.message.message}</p>
+        <p  className="Message-messageText">{props.message.message}</p>
       </Col>
     </Row>
   );

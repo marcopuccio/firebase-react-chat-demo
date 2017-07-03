@@ -9,7 +9,6 @@ import {
 } from 'react-bootstrap';
 
 import firebase from 'shared/firebase';
-
 import './MessageForm.css'
 
 export default class MessageForm extends Component {
@@ -55,28 +54,31 @@ export default class MessageForm extends Component {
 
   render() { 
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="MessageForm">
         <Row>
+          <Col xs={12}>
+            <ControlLabel>Message:</ControlLabel>
+          </Col>
           <Col xs={12} sm={10}>
-            <FormGroup>
-              <ControlLabel>Message:</ControlLabel>
-              <FormControl
-                componentClass="textarea" 
-                placeholder="Write your message..."
-                disabled={!this.state.user}
-                value={this.state.message}
-                onChange={this.handleChange}
-                >
-              </FormControl>
-            </FormGroup>
+            <FormControl
+              componentClass="textarea" 
+              placeholder="Write your message..."
+              className="MessageForm-textarea"
+              disabled={!this.state.user}
+              value={this.state.message}
+              onChange={this.handleChange}
+              >
+            </FormControl>
           </Col>
           <Col xs={12} sm={2}>
             <Button 
               type="submit"
-              disabled={!this.state.user || !this.state.message} 
+              disabled={!this.state.user || !this.state.message}
+              bsStyle="primary"
+              className="MessageForm-button"
             >
             Submit
-            </Button>
+            </Button>              
           </Col>
         </Row>
       </form>

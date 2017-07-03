@@ -1,17 +1,17 @@
 import React from 'react';
-
 import { Col, Row } from 'react-bootstrap';
 
 import { User } from 'components/User';
+import './Header.css';
 
 export default function Header(props) {
   return (
-    <header>
+    <header className="Header">
       <Row>
-        <Col xs={10}>
-          <h1>Firebase React Chat</h1>
+        <Col xs={12} sm={10}>
+          <h1 className="Header-title">Firebase React Chat</h1>
         </Col>
-        <Col xs={2}>
+        <Col xs={12} sm={2}>
           <User />
         </Col>
       </Row>

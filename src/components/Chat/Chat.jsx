@@ -9,7 +9,7 @@ import './Chat.css';
 
 export default function Chat(props) {
   return (
-    <Grid>
+    <Grid fluid={true}>
       <Header />
       <MessageList />
       <MessageForm />

@@ -1,0 +1,19 @@
+$gray: #b9b0b9;
+
+.MessageForm {
+  padding: 20px 10px;
+  border: 1px solid $gray;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.MessageForm-textarea {
+  max-width: 100%;
+  min-width: 100%;
+  margin-bottom: 5px;
+  height: 70px;
+}
+
+.MessageForm-button {
+  width: 100%;
+}

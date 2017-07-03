@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import { Message } from 'components/Message';
-
 import firebase from 'shared/firebase';
 import './MessageList.css'
 

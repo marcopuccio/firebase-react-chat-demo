@@ -24,8 +24,8 @@ export default class MessageList extends Component {
   render() {
     const messages = Object.entries(this.state.messages);
     return (
-      <Grid>
-        <main className="MessageList">
+      <Grid className="MessageList">
+        <main>
           {messages.map(message => {
             return <Message key={message[0]} message={message[1]} />
           })}

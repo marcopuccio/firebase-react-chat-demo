@@ -8,10 +8,13 @@ $message-bg: rgba(#b9b9b9, .15);
 }
 
 .Message-user {
-  text-align: right;
-  font-style: italic;
+  font-weight: bold;
+  @media (min-width: 768px) {
+    text-align: right;
+  }
 }
 
 .Message-messageText {
-  font-weight: bold;
+  font-style: italic;
+  word-wrap: break-word;
 }

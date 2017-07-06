@@ -8,10 +8,10 @@ export default function Header(props) {
   return (
     <header className="Header">
       <Row>
-        <Col xs={12} sm={10}>
+        <Col xs={12} sm={9}>
           <h1 className="Header-title">Firebase React Chat</h1>
         </Col>
-        <Col xs={12} sm={2}>
+        <Col xs={12} sm={3}>
           <User />
         </Col>
       </Row>

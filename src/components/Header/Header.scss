@@ -11,8 +11,16 @@ $gray: #b9b9b9;
 
 .Header-title {
   margin: 0;
+  margin-top: 2px;
   font-size: 22px;
   @media (min-width: 768px) {
     font-size: 36px;
+  }
+}
+.Header-github {
+  max-height: 24px;
+  margin: 0 0 0 auto;
+  @media (min-width: 768px) {
+    max-height: 36px;
   }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Grid } from 'react-bootstrap';
 
 import { Header } from 'components/Header';
 import { MessageForm } from 'components/MessageForm';

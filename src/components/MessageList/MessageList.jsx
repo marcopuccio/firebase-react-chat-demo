@@ -24,7 +24,7 @@ export default class MessageList extends Component {
   render() {
     const messages = Object.entries(this.state.messages);
     return (
-      <Grid className="MessageList">
+      <Grid fluid={true} className="MessageList">
         <main>
           {messages.map(message => {
             return <Message key={message[0]} message={message[1]} />

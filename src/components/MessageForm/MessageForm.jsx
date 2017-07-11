@@ -4,6 +4,7 @@ import {
   Col, 
   ControlLabel, 
   FormControl, 
+  Grid,
   Row
 } from 'react-bootstrap';
 
@@ -54,32 +55,34 @@ export default class MessageForm extends Component {
   render() { 
     return (
       <form onSubmit={this.handleSubmit} className="MessageForm">
-        <Row>
-          <Col xs={12}>
-            <ControlLabel>Message:</ControlLabel>
-          </Col>
-          <Col xs={12} sm={10}>
-            <FormControl
-              componentClass="textarea" 
-              placeholder="Write your message..."
-              className="MessageForm-textarea"
-              disabled={!this.state.user}
-              value={this.state.message}
-              onChange={this.handleChange}
+        <Grid fluid={true}>
+          <Row>
+            <Col xs={12}>
+              <ControlLabel>Message:</ControlLabel>
+            </Col>
+            <Col xs={12} sm={10}>
+              <FormControl
+                componentClass="textarea" 
+                placeholder="Write your message..."
+                className="MessageForm-textarea"
+                disabled={!this.state.user}
+                value={this.state.message}
+                onChange={this.handleChange}
+                >
+              </FormControl>
+            </Col>
+            <Col xs={12} sm={2}>
+              <Button 
+                type="submit"
+                disabled={!this.state.user || !this.state.message}
+                bsStyle="primary"
+                className="MessageForm-button"
               >
-            </FormControl>
-          </Col>
-          <Col xs={12} sm={2}>
-            <Button 
-              type="submit"
-              disabled={!this.state.user || !this.state.message}
-              bsStyle="primary"
-              className="MessageForm-button"
-            >
-            Submit
-            </Button>              
-          </Col>
-        </Row>
+              Submit
+              </Button>              
+            </Col>
+          </Row>
+        </Grid>
       </form>
     );  
   }

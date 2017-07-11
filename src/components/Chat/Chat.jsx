@@ -9,10 +9,16 @@ import './Chat.css';
 
 export default function Chat(props) {
   return (
-    <Grid fluid={true}>
-      <Header />
-      <MessageList />
-      <MessageForm />
-    </Grid>
+    <div className="Chat">
+      <section className="Chat-header">
+        <Header />
+      </section>
+      <section className="Chat-messageList">
+        <MessageList />
+      </section>
+      <section className="Chat-messageForm">
+        <MessageForm />
+      </section>
+    </div>
   ) 
 }

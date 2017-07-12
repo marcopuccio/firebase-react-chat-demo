@@ -18,8 +18,11 @@ export default class MessageList extends Component {
     messagesRef.on('value', snap => {
       const snapVal = snap.val();
       if(snapVal) this.setState({messages: snapVal});
-      this.scrollToLastMessage();
     });
+  }
+
+  componentDidUpdate() {
+    this.scrollToLastMessage();
   }
 
   scrollToLastMessage = () => {

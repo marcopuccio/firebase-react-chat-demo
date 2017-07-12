@@ -1,6 +1,10 @@
 $gray: #b9b0b9;
 
 .MessageForm {
+  margin-top: auto;
+}
+
+.MessageForm-form {
   padding: 20px 10px;
   border: 1px solid $gray;
   border-radius: 5px;

@@ -18,19 +18,30 @@ export default class MessageList extends Component {
     messagesRef.on('value', snap => {
       const snapVal = snap.val();
       if(snapVal) this.setState({messages: snapVal});
+      this.scrollToLastMessage();
     });
+  }
+
+  scrollToLastMessage = () => {
+    this.listContainer.scrollTop = this.bottomList.offsetTop;
   }
 
   render() {
     const messages = Object.entries(this.state.messages);
     return (
-      <Grid fluid={true} className="MessageList">
-        <main>
-          {messages.map(message => {
-            return <Message key={message[0]} message={message[1]} />
-          })}
-        </main>
-      </Grid>
+      <section 
+        className="MessageList" 
+        ref={c => this.listContainer = c}
+        >
+        <Grid fluid={true} className="MessageList-grid">
+          <main>
+            {messages.map(message => {
+              return <Message key={message[0]} message={message[1]} />
+            })}
+            <div ref={e => this.bottomList = e}></div>
+          </main>
+        </Grid>
+      </section>
     );
   }
 }
